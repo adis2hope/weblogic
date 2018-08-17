@@ -1,6 +1,6 @@
 ###########################################################
 # This script will dynamically create the domain as per your inputs
- 
+
 ###########################################################
 import os
 WLHOME=os.environ['WL_HOME']
@@ -24,7 +24,8 @@ set('Name',AdminName)
 #AdminListenAdr=raw_input('Please Enter Admin Listen Address: ')
 #AdminListenPort=input('Please enter Admin listen Port: ')
 set('ListenAddress',AdminListenAdr)
-set('ListenPort', AdminListenPort)
+AdminListenPort_int=int(AdminListenPort)
+set('ListenPort', AdminListenPort_int)
 #====================================================
 # Define the password for user weblogic. You must define the password before you
 # can write the domain.
