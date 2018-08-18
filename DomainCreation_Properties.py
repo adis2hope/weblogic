@@ -13,7 +13,7 @@ def printInStyle(txt):
 # Create a domain from the weblogic domain template.
 #==========================================
 print(WLHOME)
-readTemplate(WLHOME+"/common/templates/wls/wls.jar")
+readTemplate("/u01/app/software/mw_home/fmw/oraclehome/wlserver/common/templates/wls/wls.jar")
 #selectTemplate(WLHOME+'/common/templates/wls/wls.jar')
 #loadTemplates()
 printInStyle('Setting AdminServer name')
