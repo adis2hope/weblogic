@@ -14,6 +14,7 @@ def printInStyle(txt):
 #==========================================
 print(WLHOME)
 readTemplate("/u01/app/software/mw_home/fmw/oraclehome/wlserver/common/templates/wls/wls.jar")
+dumpStack()
 #selectTemplate(WLHOME+'/common/templates/wls/wls.jar')
 #loadTemplates()
 printInStyle('Setting AdminServer name')
