@@ -14,7 +14,8 @@ def printInStyle(txt):
 #==========================================
 print(WLHOME)
 #readTemplate("/u01/app/software/mw_home/fmw/oraclehome/wlserver/common/templates/wls/wls.jar")
-selectTemplate(WLHOME+'/common/templates/wls/wls.jar','12.2.1.3')
+#selectTemplate(WLHOME+'/common/templates/wls/wls.jar','12.2.1.3')
+selectTemplate("Basic WebLogic Server Domain", "12.2.1.3.0")
 loadTemplates()
 printInStyle('Setting AdminServer name')
 cd('Servers/AdminServer')
