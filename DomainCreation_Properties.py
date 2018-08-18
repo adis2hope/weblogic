@@ -14,7 +14,7 @@ def printInStyle(txt):
 #==========================================
 print(WLHOME)
 #readTemplate(WLHOME+'/common/templates/wls/wls.jar')
-selectTemplate(WLHOME+'/common/templates/wls/wls.jar','12.2.1.3.0')
+selectTemplate(WLHOME+'/common/templates/wls/wls.jar')
 loadTemplates()
 printInStyle('Setting AdminServer name')
 cd('Servers/AdminServer')
