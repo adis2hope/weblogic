@@ -13,9 +13,9 @@ def printInStyle(txt):
 # Create a domain from the weblogic domain template.
 #==========================================
 print(WLHOME)
-#readTemplate(WLHOME+'/common/templates/wls/wls.jar')
-selectTemplate(WLHOME+'/common/templates/wls/wls.jar')
-loadTemplates()
+readTemplate(WLHOME+"/common/templates/wls/wls.jar")
+#selectTemplate(WLHOME+'/common/templates/wls/wls.jar')
+#loadTemplates()
 printInStyle('Setting AdminServer name')
 cd('Servers/AdminServer')
 set('Name',adminServerName)
