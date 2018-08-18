@@ -1,0 +1,53 @@
+ PipeLine Examples 1 - Simple pipeline example to run the jobs oen after the other sequencitally
+ ================================================================================================
+ node {
+  stage 'weblogic_configure'
+  sh '. $HOME/.bash_profile;rm -rf weblogic;git clone https://github.com/adis2hope/weblogic.git ;cd weblogic;pwd;$wlst `pwd`/DomainCreation_Properties.py'
+  stage 'start_admin'
+  sh '. $HOME/.bash_profile;/u01/app/software/mw_home/fmw/oraclehome/labWLSTdom/bin/startWebLogic.sh &'
+  }
+  
+ PipeLine Examples 2 - Global Env Variable usuage
+ =================================================
+  node {
+  MW_HOME='/u01/app/software/mw_home/fmw/oraclehome'
+  stage 'weblogic_install'
+  sh 'echo $MW_HOME'
+  stage 'start_admin'
+  sh 'echo $MW_HOME'
+  }
+  
+ PipeLine Examples 3 - pass the string parameter to job sript in the 
+ =====================================================================
+  
+  node {
+  MW_HOME='/u01/app/software/mw_home/fmw/oraclehome'
+  stage 'weblogic_install'
+  sh 'echo $DOMAIN_HOME'
+  stage 'start_admin'
+  sh 'echo $MW_HOME'
+  }
+  
+  
+  PipeLine Examples 4 - Parallel processing using pipeline Jenkins
+  ================================================================
+  
+  stage("Work"){
+     parallel ( "node1":   
+            {
+              node('Node1') {
+  dir('/home/vagrant/jenkinsslave') {
+  sh 'hostname;ls -ltr'
+  } 
+ }
+ },
+
+        "node2" : {
+            node('Node2') {
+   dir('/home/vagrant/jenkinsslave') {
+   sh 'hostname;ls -ltr'
+  } 
+ } 
+ }
+ )
+ }

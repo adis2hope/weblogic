@@ -1,0 +1,3 @@
+Q. Create 4 different containers - one db, weblogic- cluster, proxy  using a compose file
+
+use https://wlatricksntips.blogspot.com/search/label/Oracle%20XE and https://www.youtube.com/watch?v=JnojPO-A-1o to check and do the task mentioned above 
