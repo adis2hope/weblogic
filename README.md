@@ -9,7 +9,9 @@ Step 2: Configure a domain using file - DomainCreation_Properties.py and create 
 . $HOME/.bash_profile
 rm -rf weblogic
 git clone https://github.com/adis2hope/weblogic.git
+
 cd weblogic
+
 wlst DomainCreation_Properties.py
 
 Step 3: Not yet done ( start admin server and add managed server followed by deployment)
