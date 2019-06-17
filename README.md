@@ -7,7 +7,9 @@ Note : this job should have 2 string parameters - FMW_VERSION and BASE_HOME (whe
 Step 2: Configure a domain using file - DomainCreation_Properties.py and create "OPENSTYLE" job with below commands and no parameters-
 
 . $HOME/.bash_profile
+
 rm -rf weblogic
+
 git clone https://github.com/adis2hope/weblogic.git
 
 cd weblogic
